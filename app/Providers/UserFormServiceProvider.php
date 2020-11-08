@@ -37,11 +37,7 @@ class UserFormServiceProvider extends ServiceProvider
             $view->with('subjects', Cache::remember('subjects', config('cache.duration.long'), function(){
                 return Subject::select('id','name')->get();
             }));
-            $view->with('grade_levels', [
-                ['level' => 10,'name' => __('label.class').' X'],
-                ['level' => 11,'name' => __('label.class').' XI'],
-                ['level' => 12,'name' => __('label.class').' XII'],
-            ]);
+            $view->with('grade_levels', Grade::select('grade_level')->orderBy('grade_level')->distinct()->pluck('grade_level'));
         });
     }
 }

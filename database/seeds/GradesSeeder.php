@@ -19,23 +19,23 @@ class GradesSeeder extends Seeder
         {
             DB::table('grades')->insert([
                 'name' => 'VII'.$type[$i],
-                'grade_level' => 10
+                'grade_level' => 7
             ]);
 
             DB::table('grades')->insert([
                 'name' => 'VIII'.$type[$i],
-                'grade_level' => 11
+                'grade_level' => 8
             ]);
 
             DB::table('grades')->insert([
                 'name' => 'IX'.$type[$i],
-                'grade_level' => 12
+                'grade_level' => 9
             ]);
         }
 
         DB::table('grades')->insert([
             'name' => 'VIIZ',
-            'grade_level' => 10
+            'grade_level' => 7
         ]);
     }
 }
