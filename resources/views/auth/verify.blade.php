@@ -34,7 +34,7 @@
             <span>{{ config('app.name') }} | All Rights Reserved.</span>
         </div>
     </div>
-    <div class="col-lg-8 col-sm-12">
+    <div class="col-lg-8 col-sm-12 auth-img">
         <div class="card">
             <img src="{{asset('assets/images/signin.svg')}}" alt="Forgot Password"/>
         </div>

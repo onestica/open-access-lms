@@ -50,7 +50,7 @@ return [
     'pob_not_verified'=> 'Place of birth was not verified',
     'account_with_identity_no'=> 'Account with identity number of ',
     'already_registered'=> ' has been registered',
-    'evaluation_data_created'=> 'Evaluation successfully added with code <b><span class="text-warning">: code </span></b>. Distribute the code to students so they can access the evaluation.',
+    'evaluation_data_created'=> 'Evaluation successfully added with code <b><span class="text-dark">:code </span></b> Distribute the code to students so they can access the evaluation.',
     'evaluation_data_updated'=> 'Evaluation successfully updated',
     'evaluation_data_deleted'=> 'Evaluation successfully deleted',
     'competency_added_to_question'=> 'Basic competence is successfully applied to the evaluation problem',

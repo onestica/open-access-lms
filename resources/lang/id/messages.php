@@ -50,7 +50,7 @@ return [
     'pob_not_verified'=> 'Tempat lahir tidak terverifikasi',
     'account_with_identity_no'=> 'Akun dengan NIS/NIY ',
     'already_registered'=> ' telah terdaftar',
-    'evaluation_data_created'=> 'Evaluasi berhasil ditambahkan dengan kode <b><span class="text-warning">: code </span></b>. Bagikan kode tersebut pada siswa agar dapat mengakses evaluasi.',
+    'evaluation_data_created'=> 'Evaluasi berhasil ditambahkan dengan kode <b><span class="text-dark">:code </span></b> Bagikan kode tersebut pada siswa agar dapat mengakses evaluasi.',
     'evaluation_data_updated'=> 'Evaluasi berhasil diperbarui',
     'evaluation_data_deleted'=> 'Evaluasi berhasil dihapus',
     'competency_added_to_question'=> 'Kompetensi dasar berhasil diterapkan ke soal evaluasi',

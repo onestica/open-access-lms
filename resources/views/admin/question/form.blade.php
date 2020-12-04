@@ -46,7 +46,7 @@
     <ol id="answerChoiceList" class="mt-3">
         <p class="font-weight-bold">{{ __('label.answer_option') }}</p>
         <small>({{ __('messages.mark_answer_key') }})</small>
-        @for($i=1;$i<=5;$i++)
+        @for($i=1;$i<=4;$i++)
         <li class="answer-choice-item-wrapper">
             <div class="row mt-3">
                 <div class="col-1 text-center">

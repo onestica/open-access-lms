@@ -16,6 +16,16 @@
 
         <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}">
+        <style>
+            .auth-img {
+                display: block;
+            }
+            @media(max-width: 480px) {
+                .auth-img {
+                    display: none;
+                }
+            }
+        </style>
         @stack('after-styles')
     </head>    
     <?php 
