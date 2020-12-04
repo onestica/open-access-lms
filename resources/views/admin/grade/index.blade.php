@@ -37,9 +37,9 @@
                         <div class="col-lg-3 col-12">
                             <div class="form-group">
                                 <select name="grade_level" class="form-control show-tick">
-                                    <option value="10">{{ __('label.level') }} 1 ({{ __('label.class') }} 10)</option>
-                                    <option value="11">{{ __('label.level') }} 2 ({{ __('label.class') }} 11)</option>
-                                    <option value="12">{{ __('label.level') }} 3 ({{ __('label.class') }} 12)</option>
+                                    <option value="7">{{ __('label.level') }} 1 ({{ __('label.class') }} 7)</option>
+                                    <option value="8">{{ __('label.level') }} 2 ({{ __('label.class') }} 8)</option>
+                                    <option value="9">{{ __('label.level') }} 3 ({{ __('label.class') }} 9)</option>
                                 </select>
                             </div>
                         </div>

@@ -20,7 +20,7 @@ class LearningTopicFormRequest extends FormRequest
             'subject_id' => 'required|exists:subjects,id',
             'school_year' => 'required|string|max:191',
             'semester' => 'required',
-            'grade_level' => ['required',Rule::in([10,11,12])],
+            'grade_level' => ['required',Rule::in([7,8,9])],
             'grade_id' => 'required',
             'rpp_file' => 'nullable|file|mimes:doc,docx,odp,ods,odt,pdf,ppt,pptx,swf,vsd,png,jpg,jpeg,webp,xls,xlsx,zip,rar|max:5000',
             'competency_id' => 'required',

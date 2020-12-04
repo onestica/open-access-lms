@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Auth;
 
 class LearningTopicGradeFolderController extends Controller
 {
+    public function index()
+    {
+        $school_years = LearningTopic::distinct()->pluck('school_year');
+        return view('admin.learning-topic.overview.index',compact('school_years'));
+    }
+
     public function getGradeSemester(Request $request)
     {
         try {
@@ -93,11 +99,5 @@ class LearningTopicGradeFolderController extends Controller
         } catch (\Throwable $th) {
             return response()->json(['error' => true, 'e' => $th]);
         }
-    }
-
-    public function index()
-    {
-        $school_years = LearningTopic::distinct()->pluck('school_year');
-        return view('admin.learning-topic.overview.index',compact('school_years'));
     }
 }

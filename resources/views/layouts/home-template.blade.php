@@ -108,10 +108,10 @@
               @auth()
               <form action="{{route('logout')}}" method="post">
                 @csrf
-                <a href="{{\LaravelLocalization::localizeURL('dashboard')}}" class="btn btn-lg btn-outline-royal-blue btn-rounded mr-2 btn-login">{{ __('menu-label.dashboard') }}</a>
-                <button type="submit" class="btn btn-lg btn-royal-blue btn-rounded btn-login text-light mr-2">{{ __('menu-label.logout') }}</button>
-                <a href="{{\LaravelLocalization::localizeURL('dashboard')}}" class="btn btn-outline-royal-blue btn-sm-login">{{ __('menu-label.dashboard') }}</a>
-                <button type="submit" class="btn btn-royal-blue btn-sm-login text-light">{{ __('menu-label.logout') }}</button>
+                <a href="{{\LaravelLocalization::localizeURL('dashboard')}}" class="btn btn-lg btn-royal-blue btn-rounded mr-2 btn-login text-light">{{ __('menu-label.dashboard') }}</a>
+                <button type="submit" class="btn btn-lg btn-outline-royal-blue btn-rounded btn-login mr-2">{{ __('menu-label.logout') }}</button>
+                <a href="{{\LaravelLocalization::localizeURL('dashboard')}}" class="btn btn-royal-blue btn-sm-login text-light">{{ __('menu-label.dashboard') }}</a>
+                <button type="submit" class="btn btn-outline-royal-blue btn-sm-login">{{ __('menu-label.logout') }}</button>
               </form>
               @endauth
               <div id="langSelect" class="dropdown">

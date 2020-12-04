@@ -34,14 +34,17 @@
                         <div class="col-md-4 col-sm-12 form-group">
                             <p><b>{{ __('label.school_year')}}</b></p>
                             <select name="school_year" class="select2">
-                                <option value="1">{{ __('label.select')}}</option>
-                                <option value="2019/2020">2019/2020</option>
-                                <option value="2020/2021">2020/2021</option>
+                                <option value="">{{ __('label.select')}}</option>
+                                @if(isset($school_years))
+                                    @for($i=0;$i<count($school_years);$i++)
+                                        <option value="{{ $school_years[$i] }}">{{ $school_years[$i] }}</option>
+                                    @endfor
+                                @endif
                             </select>
                         </div>
                         <div class="col-md-2 col-sm-12 form-group">
                             <p class="text-light d-none d-md-block">-</p>
-                            <button type="submit" class="btn btn-lg btn-outline-royal-blue btn-filter-topic"><i class="fas fa-filter mr-2"></i> Filter</button>
+                            <button type="submit" class="btn btn-lg btn-royal-blue btn-filter-topic text-light"><i class="fas fa-filter mr-2"></i> Filter</button>
                         </div>
                     </div>
                 </form>

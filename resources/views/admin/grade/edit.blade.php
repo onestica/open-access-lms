@@ -28,9 +28,9 @@
                         <div class="col-lg-4 col-12">
                             <div class="form-group">
                                 <select name="grade_level" class="select2">
-                                    <option value="10" @if($grade->grade_level == 10) selected @endif>{{ __('label.level') }} 1 ({{ __('label.class') }} 10)</option>
-                                    <option value="11" @if($grade->grade_level == 11) selected @endif>{{ __('label.level') }} 2 ({{ __('label.class') }} 11)</option>
-                                    <option value="12" @if($grade->grade_level == 12) selected @endif>{{ __('label.level') }} 3 ({{ __('label.class') }} 12)</option>
+                                    <option value="7" @if($grade->grade_level == 7) selected @endif>{{ __('label.level') }} 1 ({{ __('label.class') }} 7)</option>
+                                    <option value="8" @if($grade->grade_level == 8) selected @endif>{{ __('label.level') }} 2 ({{ __('label.class') }} 8)</option>
+                                    <option value="9" @if($grade->grade_level == 9) selected @endif>{{ __('label.level') }} 3 ({{ __('label.class') }} 9)</option>
                                 </select>
                             </div>
                         </div>

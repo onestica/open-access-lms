@@ -106,7 +106,7 @@
                         <a href="{{\LaravelLocalization::localizeURL('admin/topics/overview')}}">{{ __('menu-label.folder_view') }}</a>
                     </li>
                     <li>
-                        <a href="{{\LaravelLocalization::localizeURL('admin/topics')}}">{{ __('menu-label.all_data') }}</a>
+                        <a href="{{\LaravelLocalization::localizeURL('admin/topics')}}">{{ __('menu-label.list_view') }}</a>
                     </li>
                     @hasrole('Pengajar')
                     <li>

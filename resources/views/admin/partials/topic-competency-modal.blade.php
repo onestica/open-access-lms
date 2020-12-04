@@ -22,9 +22,9 @@
                     <div class="col-md-3 col-12 form-group">
                         <label>{{ __('label.class') }} <span class="text-danger">*</span></label>
                         <select class="form-control show-tick" name="grade_level" id="gradeSelectBox">
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
                         </select>
                     </div>
                     <div class="col-md-2 col-12 form-group">
@@ -69,9 +69,9 @@
                         <div class="col-md-4 col-12 form-group">
                             <label>{{ __('label.class') }} <span class="text-danger">*</span></label>
                             <select class="form-control show-tick" name="grade_level" id="addGradeSelectBox">
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">

@@ -12,7 +12,7 @@ class StudentPromotionController extends Controller
 {
     public function index()
     {
-        $grades = Grade::select('id','name')->orderBy('name','asc')->get();
+        $grades = Grade::select('id','name')->orderBy('grade_level')->orderBy('name')->get();
         $students = Member::whereNotNull('grade')->select('id','identity_number','name','grade')->get();
 
         return view('admin.student.promotion', compact('grades','students'));

@@ -29,5 +29,6 @@ return [
     "all_data"=> "All Data",
     "import_data"=> "Import Data",
     "class_promotion"=> "Class Promotion",
-    "folder_view"=> "Folder View"
+    "folder_view"=> "Folder View",
+    "list_view"=> "List View"
 ];

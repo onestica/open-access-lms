@@ -29,5 +29,6 @@ return [
     "all_data"=> "Semua Data",
     "import_data"=> "Import Data",
     "class_promotion"=> "Kenaikan Kelas",
-    "folder_view"=> "Tampilan Folder"
+    "folder_view"=> "Tampilan Folder",
+    "list_view"=> "Tampilan List"
 ];

@@ -31,19 +31,23 @@
                 </ul>
             </div>
             <div class="body">
-                <div id="folderWrapper" class="row" data-view-order="1">
-                    <div id="loadingLayer"></div>
-                    @for($i=0;$i<count($school_years);$i++)
-                    <div class="col-md-3 col-sm-12 mb-5">
-                        <a href="#" class="folder-link school-year-folder" data-school-year="{{$school_years[$i]}}">
-                            <div class="d-flex text-center flex-column">
-                                <i class="zmdi zmdi-folder folder-icon"></i>
-                                <span class="folder-name">{{ __('label.school_year') }} {{$school_years[$i]}}</span>
-                            </div>
-                        </a>
+                @if(count($school_years) == 0)
+                    <h4 class="text-secondary text-center">{{ __('label.no_data')}} <i class="zmdi zmdi-block ml-2"></i></h4>
+                @else
+                    <div id="folderWrapper" class="row" data-view-order="1">
+                        <div id="loadingLayer"></div>
+                        @for($i=0;$i<count($school_years);$i++)
+                        <div class="col-md-3 col-sm-12 mb-5">
+                            <a href="#" class="folder-link school-year-folder" data-school-year="{{$school_years[$i]}}">
+                                <div class="d-flex text-center flex-column">
+                                    <i class="zmdi zmdi-folder folder-icon"></i>
+                                    <span class="folder-name">{{ __('label.school_year') }} {{$school_years[$i]}}</span>
+                                </div>
+                            </a>
+                        </div>
+                        @endfor
                     </div>
-                    @endfor
-                </div>
+                @endif
             </div>
         </div>
     </div>

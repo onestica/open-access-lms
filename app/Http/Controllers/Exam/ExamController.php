@@ -27,7 +27,7 @@ class ExamController extends Controller
     public function create()
     {
         $subjects = Subject::select('id','name')->get();
-        $grades = Grade::select('id','name')->orderBy('name')->get();
+        $grades = Grade::select('id','name')->orderBy('grade_level')->orderBy('name')->get();
 
         return view('admin.exam.create', compact('subjects','grades'));
     }
@@ -46,7 +46,7 @@ class ExamController extends Controller
     public function edit(Exam $exam, $exam_status = null)
     {
         $subjects = Subject::select('id','name')->get();
-        $grades = Grade::select('id','name')->orderBy('name')->get();
+        $grades = Grade::select('id','name')->orderBy('grade_level')->orderBy('name')->get();
         $question_types = QuestionType::select('id','name')->get();
         $competencies = BasicCompetency::where('subject_id',$exam->subject_id)->select('id','competency')->get();
 

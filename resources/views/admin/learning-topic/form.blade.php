@@ -54,17 +54,17 @@
     <label>{{ __('label.class_level') }} <span class="text-danger">*</span></label>
     <select class="form-control show-tick" name="grade_level">
         @if(isset($topic->grade_level))
-            <option value="10" @if($topic->grade_level == 10) selected @endif>10</option>
-            <option value="11" @if($topic->grade_level == 11) selected @endif>11</option>
-            <option value="12" @if($topic->grade_level == 12) selected @endif>12</option>
+            <option value="7" @if($topic->grade_level == 7) selected @endif>7</option>
+            <option value="8" @if($topic->grade_level == 8) selected @endif>8</option>
+            <option value="9" @if($topic->grade_level == 9) selected @endif>9</option>
         @elseif(old('grade_level'))
-            <option value="10" @if(old('grade_level') == 10) selected @endif>10</option>
-            <option value="11" @if(old('grade_level') == 11) selected @endif>11</option>
-            <option value="12" @if(old('grade_level') == 12) selected @endif>12</option>
+            <option value="7" @if(old('grade_level') == 7) selected @endif>7</option>
+            <option value="8" @if(old('grade_level') == 8) selected @endif>8</option>
+            <option value="9" @if(old('grade_level') == 9) selected @endif>9</option>
         @else
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
         @endif
     </select>
 </div>

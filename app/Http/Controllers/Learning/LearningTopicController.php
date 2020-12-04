@@ -33,7 +33,7 @@ class LearningTopicController extends Controller
     public function create()
     {
         $subjects = Subject::select('id', 'name')->get();
-        $grades = Grade::select('id','name')->orderBy('name','asc')->get();
+        $grades = Grade::select('id','name')->orderBy('grade_level')->orderBy('name')->get();
 
         return view('admin.learning-topic.create', compact('subjects','grades'));
     }
@@ -63,7 +63,7 @@ class LearningTopicController extends Controller
     public function edit(LearningTopic $topic)
     {
         $subjects = Subject::select('id', 'name')->get();
-        $grades = Grade::select('id','name')->orderBy('name','asc')->get();
+        $grades = Grade::select('id','name')->orderBy('grade_level')->orderBy('name')->get();
         
         $topic_grades = [];
         
