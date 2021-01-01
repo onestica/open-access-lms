@@ -24,7 +24,7 @@
                     <div class="row">
                         @include('admin.learning-topic.form')
                         <div class="col-12 form-group">
-                            <button type="submit" class="float-right btn btn-primary btn-raised btn-round waves-effect">{{ __('section-title.learning_step_add') }}</button>
+                            <button type="submit" class="float-right btn btn-primary btn-raised btn-round waves-effect">{{ __('button-label.save') }}</button>
                         </div>
                     </div>
                 </form>
