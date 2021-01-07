@@ -17,7 +17,15 @@ class QuestionController extends Controller
     public function index()
     {
         $subjects = Subject::select('id','name')->get();
-        $questions = Question::with('subject','user','questionType')->select('id','question_type_id','title','excerpt')->get();
+        $role = Auth::user()->roles[0]->name;
+
+        if(($role == "Admin") || ($role == "Supervisor"))
+        {
+            $questions = Question::with('questionType')->select('id','question_type_id','title','excerpt')->get();
+        }
+        else if($role == "Pengajar") {
+            $questions = Question::with('questionType')->select('id','question_type_id','title','excerpt')->where('user_id', Auth::id())->get();
+        }
 
         return view('admin.question.index', compact('questions','subjects'));
     }
@@ -25,7 +33,15 @@ class QuestionController extends Controller
     public function indexBySubject(Subject $subject)
     {
         $subjects = Subject::select('id','name')->get();
-        $questions = Question::with('subject','user','questionType')->select('id','question_type_id','title','excerpt')->where('subject_id',$subject->id)->get();
+        $role = Auth::user()->roles[0]->name;
+
+        if(($role == "Admin") || ($role == "Supervisor"))
+        {
+            $questions = Question::with('questionType')->select('id','question_type_id','title','excerpt')->where('subject_id',$subject->id)->get();
+        }
+        else if($role == "Pengajar"){
+            $questions = Question::with('questionType')->select('id','question_type_id','title','excerpt')->where('user_id', Auth::id())->where('subject_id',$subject->id)->get();
+        }
 
         return view('admin.question.index', compact('questions','subjects','subject'));
     }

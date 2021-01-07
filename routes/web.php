@@ -164,8 +164,8 @@ Route::group([
                 // Question
                 Route::get('exams/{exam}/questions/subjects/{subject}/data', 'Exam\QuestionDataSourceController@fetchDataBySubject')->name('questions.subjects.data');
                 Route::post('questions', 'Exam\QuestionController@store');
-                Route::get('questions/{question}/edit', 'Exam\QuestionController@edit');
-                Route::patch('questions/{question}','Exam\QuestionController@update');
+                Route::get('questions/{question}/edit', 'Exam\QuestionController@edit')->middleware('can:update,question');
+                Route::patch('questions/{question}','Exam\QuestionController@update')->middleware('can:update,question');
                 Route::delete('questions', 'Exam\QuestionController@destroy')->name('questions.batch.delete');
                 // Exam
                 Route::get('exams/create', 'Exam\ExamController@create');
