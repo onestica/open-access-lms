@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Learning;
 
 use App\LearningTopic;
-use App\LearningPhase;
 use App\LearningMaterial;
+use App\Task;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,9 +24,7 @@ class LearningTopicBatchDeleteController extends Controller
         DB::table('basic_competency_topic')->whereIn('learning_topic_id',$topic_ids)->delete();
         DB::table('learning_topic_grade')->whereIn('learning_topic_id',$topic_ids)->delete();
 
-        $step_ids = LearningPhase::whereIn('learning_topic_id', $topic_ids)->pluck('id')->toArray();
-
-        $material_files = LearningMaterial::whereIn('learning_phase_id', array_filter($step_ids))->pluck('file_path')->toArray();
+        $material_files = LearningMaterial::whereIn('learning_topic_id', array_filter($topic_ids))->pluck('file_path')->toArray();
         $rpp_files = LearningTopic::whereIn('id',$topic_ids)->pluck('rpp_file')->toArray();
         $task_files = Task::whereIn('id',$topic_ids)->pluck('attachment_path')->toArray();
 
