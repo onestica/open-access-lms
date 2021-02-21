@@ -41,7 +41,7 @@
 <script src="{{asset('assets/js/pages/forms/basic-form-elements.js')}}"></script>
 <script src="{{asset('assets/plugins/dropify/js/dropify.min.js')}}"></script>
 <script src="{{asset('assets/js/pages/forms/dropify.js')}}"></script>
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.11/tinymce.min.js"></script>
 <script src="{{asset('js/custom/tinymce-init.js')}}"></script>
 <script src="{{asset('assets/plugins/sweetalert/sweetalert.min.js')}}"></script>
 <script>

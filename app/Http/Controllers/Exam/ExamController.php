@@ -19,7 +19,15 @@ class ExamController extends Controller
 
     public function index()
     {
-        $exams = Exam::with('subject','user')->select('id','subject_id','enroll_code','title','date','time_start','time_end','status','publish_status','total_question')->get();
+        $role = Auth::user()->roles[0]->name;
+
+        if($role == "Pengajar")
+        {
+            $exams = Exam::with('subject')->select('id','subject_id','enroll_code','title','date','time_start','time_end','status','publish_status','total_question')->where('user_id',Auth::id())->get();
+        }
+        elseif(($role == 'Admin') || ($role == 'Supervisor')) {
+            $exams = Exam::with('subject')->select('id','subject_id','enroll_code','title','date','time_start','time_end','status','publish_status','total_question')->get();
+        }
 
         return view('admin.exam.index', compact('exams'));
     }

@@ -99,8 +99,8 @@
                     <table id="table-question" class="table table-hover table-fixed">
                         <thead>
                             <tr>
-                                <th style="width: 5%;">{{ __('label.number')}}</th>
-                                <th style="width: 45%;">{{ __('label.question')}}</th>
+                                <th style="width: 10%;">{{ __('label.number')}}</th>
+                                <th style="width: 40%;">{{ __('label.question')}}</th>
                                 <th style="width: 40%;">{{ __('label.basic_competency')}}</th>
                                 <th style="width: 10%;">{{ __('label.grade')}}</th>
                             </tr>

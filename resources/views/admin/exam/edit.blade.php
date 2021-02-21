@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{{asset('assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css')}}"/>
 <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}"/>
 <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-select/css/bootstrap-select.css')}}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 @stop
 
 @section('content')
@@ -45,13 +46,13 @@
 </div>
 <div class="row clearfix">
     <div class="col-lg-12 col-12">
-        <div class="alert alert-success alert-dismissible show fade" @if(!session('status'))style="display:none"@endif role="alert">
+        <div id="alertQuestionExamSuccess" class="alert alert-success alert-dismissible show fade" @if(!session('status'))style="display:none"@endif role="alert">
             {{ session('status') ?? null }}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="alert alert-danger alert-dismissible show fade" style="display:none" role="alert">
+        <div id="alertQuestionExamDanger" class="alert alert-danger alert-dismissible show fade" style="display:none" role="alert">
             
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -129,12 +130,13 @@
 @endsection
 
 @section('page-script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="{{asset('assets/plugins/momentjs/moment.js')}}"></script>
 <script src="{{asset('assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')}}"></script>
 <script src="{{asset('assets/js/pages/forms/basic-form-elements.js')}}"></script>
 <script src="{{asset('assets/bundles/datatablescripts.bundle.js')}}"></script>
 <script src="{{asset('assets/js/pages/tables/jquery-datatable.js')}}"></script>
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.11/tinymce.min.js"></script>
 <script src="{{asset('js/custom/tinymce-init.js')}}"></script>
 <script>
     $('.dataTable').dataTable( {
@@ -173,8 +175,8 @@
         });
 
         $('.btn-question-bank').on('click',function(){
-            $('.alert-success').hide()
-            $('.alert-danger').hide()
+            $('#alertQuestionExamSuccess').hide()
+            $('#alertQuestionExamDanger').hide()
             fetch_data()
         });
 
@@ -240,9 +242,7 @@
                         $("#btnAddQuestionToExam").html("Loading...")
                     },
                     success: function(data){
-                        $('.alert-danger').slideUp(500)
-                        $('.alert-success').slideDown(500)
-                        $('.alert-success').text("{!! __('messages.question_success_added') !!}")
+                        toastr.success("{!! __('messages.question_success_added') !!}")
                         $("#btnAddQuestionToExam").prop("disabled",false)
                         $("#btnAddQuestionToExam").html("{!! __('button-label.add_to_evaluation') !!}")
                         $("#examQuestionData").html(data['content'])
@@ -252,9 +252,7 @@
                         $("#examQuestionData").html(data.responseText)
                         $("#btnAddQuestionToExam").prop("disabled",false)
                         $("#btnAddQuestionToExam").html("{!! __('button-label.add_to_evaluation') !!}")
-                        $('.alert-success').slideUp(500)
-                        $('.alert-danger').slideDown(500)
-                        $('.alert-danger').text(data['message'])
+                        toastr.error(data['message'])
                         
                     },
                 })
@@ -278,14 +276,10 @@
                     competency_id: competency_id,
                 },
                 success: function(response){
-                    $('.alert-danger').slideUp(500)
-                    $('.alert-success').slideDown(500).delay(1000).slideUp()
-                    $('.alert-success').text(response['message'])
+                    toastr.success(response['message'])
                 },
                 error: function(response){
-                    $('.alert-success').slideUp(500)
-                    $('.alert-danger').slideDown(500).delay(1000).slideUp()
-                    $('.alert-danger').text("{!! __('messages.competency_fail_applied') !!}")
+                    toastr.error("{!! __('messages.competency_fail_applied') !!}")
                 },
             })
         });

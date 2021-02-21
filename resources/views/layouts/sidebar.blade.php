@@ -13,11 +13,18 @@
     <div class="menu">
         <ul class="list">
             <li>
-                <div class="user-info">
-                    <div class="image"><a href="{{url('admin/users/avatar/edit')}}" title="{{ __('section-title.avatar_edit') }}"><img src="{{ Auth::user()->avatar ? asset('storage/'.Auth::user()->avatar) : asset('img/avatar/default-user.jpg') }}" alt="User"></a></div>
+                <div class="user-info py-3">
+                    <div class="image">
+                        <a href="{{url('admin/users/avatar/edit')}}" title="{{ __('section-title.avatar_edit') }}"><img src="{{ Auth::user()->avatar ? asset('storage/'.Auth::user()->avatar) : asset('img/avatar/default-user.jpg') }}" alt="User"></a>
+                    </div>
                     <div class="detail text-left">
-                        <h4>{{Auth::user()->name}}</h4>
+                        <h5 class="mb-0">{{Auth::user()->name}}</h5>
+                        @hasrole('Siswa')
+                        <small>{{ __('label.class') }} {{Auth::user()->grade->name}}</small>
+                        @endhasrole
+                        @unlessrole('Siswa')
                         <small>{{Auth::user()->roles[0]->name}}</small>
+                        @endunlessrole
                         @hasrole('Wali Siswa')
                             <br>
                             <b><small class="text-primary">{{Auth::user()->student->name}}</small></b>

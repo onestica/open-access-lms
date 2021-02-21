@@ -83,6 +83,6 @@
 @endsection
 
 @section('page-script')
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.11/tinymce.min.js"></script>
 <script src="{{asset('js/custom/tinymce-init.js')}}"></script>
 @stop

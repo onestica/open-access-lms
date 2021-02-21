@@ -44,8 +44,8 @@
                     <thead>
                         <tr>
                             <th>{{ __('label.basic_competency')}}</th>
-                            <th>{{ __('label.correct_answer')}}</th>
                             <th>{{ __('label.question_count')}}</th>
+                            <th>{{ __('label.correct_answer')}}</th>
                             <th>{{ __('label.score')}}</th>
                         </tr>
                     </thead>

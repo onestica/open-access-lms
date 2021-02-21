@@ -16,7 +16,8 @@ class DemoMemberSeeder extends Seeder
             [
                 'identity_number' => '11111111',
                 'name' => 'Admin',
-                'pob' => 'SEMARANG'
+                'pob' => 'SEMARANG',
+                'is_account_created' => 1
             ]
         );
 
@@ -24,7 +25,8 @@ class DemoMemberSeeder extends Seeder
             [
                 'identity_number' => '11111112',
                 'name' => 'Supervisor',
-                'pob' => 'SEMARANG'
+                'pob' => 'SEMARANG',
+                'is_account_created' => 1
             ]
         );
 
@@ -32,7 +34,8 @@ class DemoMemberSeeder extends Seeder
             [
                 'identity_number' => '11111113',
                 'name' => 'Pengajar',
-                'pob' => 'SEMARANG'
+                'pob' => 'SEMARANG',
+                'is_account_created' => 1
             ]
         );
 
@@ -41,7 +44,8 @@ class DemoMemberSeeder extends Seeder
                 'identity_number' => '11111114',
                 'name' => 'Siswa',
                 'grade' => 'VIIZ',
-                'pob' => 'SEMARANG'
+                'pob' => 'SEMARANG',
+                'is_account_created' => 1
             ]
         );
     }
