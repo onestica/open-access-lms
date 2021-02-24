@@ -18,7 +18,7 @@ return [
     "announcement"=> "Announcement",
     "subject"=> "Subject",
     "learning_topic"=> "Learning Topic",
-    "task"=> "Student Assignment",
+    "task"=> "Assignment",
     "task_summary"=> "Assignment Summary",
     "question"=> "Question",
     "change_avatar"=> "Change Profile Picture",
@@ -30,5 +30,6 @@ return [
     "import_data"=> "Import Data",
     "class_promotion"=> "Class Promotion",
     "folder_view"=> "Folder View",
-    "list_view"=> "List View"
+    "list_view"=> "List View",
+    "show_all"=> "Show All"
 ];

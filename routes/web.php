@@ -60,9 +60,12 @@ Route::group([
             Route::get('my-topics', 'Frontpage\StudentLearningTopicCollectionController@index');
             Route::post('my-topics', 'Frontpage\StudentLearningTopicCollectionController@store');
             Route::delete('my-topics/{topic}', 'Frontpage\StudentLearningTopicCollectionController@destroy');
-            Route::get('student/tasks/report', 'Task\StudentTaskSubmissionController@index');
+            Route::get('student/topics', 'Learning\StudentTopicController@index');
+            Route::get('student/topics/my-topics', 'Learning\StudentTopicController@indexMyTopic');
+            Route::get('student/tasks/reports', 'Task\StudentTaskSubmissionController@index');
             Route::get('student/exams', 'Exam\StudentExamController@index');
-            Route::get('student/exams/results/{exam_result}', 'Exam\StudentExamController@show');
+            Route::get('student/exams/results', 'Exam\StudentExamResultController@index');
+            Route::get('student/exams/results/{exam_result}', 'Exam\StudentExamResultController@show');
             Route::post('tasks/submissions','Frontpage\TaskSubmissionController@store');
             Route::patch('tasks/submissions/{submission}','Frontpage\TaskSubmissionController@update');
             Route::get('topics/{topic_id}/tasks', 'Frontpage\TaskController@indexByTopic');

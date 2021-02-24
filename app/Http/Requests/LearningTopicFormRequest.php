@@ -22,7 +22,7 @@ class LearningTopicFormRequest extends FormRequest
             'semester' => 'required',
             'grade_level' => ['required',Rule::in([7,8,9])],
             'grade_id' => 'required',
-            'rpp_file' => 'nullable|file|mimes:doc,docx,odp,ods,odt,pdf,ppt,pptx,swf,vsd,png,jpg,jpeg,webp,xls,xlsx,zip,rar|max:5000',
+            'rpp_file' => 'nullable|file|mimes:doc,docx,odp,ods,odt,pdf,ppt,pptx,swf,vsd,png,jpg,jpeg,webp,xls,xlsx,zip,rar|max:10000',
             'competency_id' => 'required',
         ];
     }

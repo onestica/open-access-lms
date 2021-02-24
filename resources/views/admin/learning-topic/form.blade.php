@@ -83,7 +83,7 @@
     </select>
 </div>
 <div class="col-12 form-group">
-    <label>{{ __('label.rpp_file') }} (optional)</label>
+    <label>{{ __('label.rpp_file') }} (optional) <span class="text-danger">Max. 10 MB</span></label>
     <input type="file" name="rpp_file" class="dropify">
     <label class="mt-2">{{ __('messages.compress_file_link') }} <a href="https://youcompress.com">YouCompress.com</a></label>
     {{-- <input type="hidden" name="is_file_empty" value="0"> --}}

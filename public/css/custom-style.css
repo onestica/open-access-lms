@@ -544,13 +544,130 @@ td.header .header-dropdown li .dropdown-menu {
 	border: 1px solid #e6e6e6;
 }
 
-@media(max-width: 768px){
+.bg-purple {
+	background-color: var(--purple);
+}
 
+.bg-light-purple {
+	background-color: #b6b3ff;
+}
+
+.card-body {
+	padding: 15px 30px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	box-shadow: none;
+}
+
+.card .topic-list-wrapper {
+	background: transparent;
+}
+
+.card-topic {
+	display: flex;
+	flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 10px 3px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+.card-topic .topic-action .btn-group {
+	width: 100%;
+	margin-bottom: .25rem;
+}
+
+.avatar-size {
+	height: 80px;
+	width: 75px;
+}
+
+.topic-action {
+	padding: 0px;
+}
+
+.topic-action .action-icon {
+	margin-right: 0!important;
+	flex-basis: 20%;
+	width: 20%;
+}
+
+.topic-action .action-icon > i {
+	/* color: #fff; */
+	font-size: 1rem;
+}
+
+.topic-action .action-text {
+	flex-basis: 80%;
+	width: 80%;
+	font-size: 1rem;
+	padding: 10px;
+	/* border-color: transparent; */
+}
+
+.btn-round-search {
+	width: 40px;
+	height: 40px;
+	background: #3F3D56;
+	border-radius: 30px;
+	font-size: 1.2rem;
+	color: #fff;
+	border: none;
+	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.3);
+	margin-right: -3px;
+	position: absolute;
+	right: 0;
+	padding: 0;
+}
+
+.form-group .form-control.form-round-search {
+	background-color: #fff;
+	border-radius: 30px;
+	border:none;
+	width:400px;
+}
+
+.btn-show-more {
+	background: #3F3D56;
+	padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+	font-weight: 500;
+	border: none;
+}
+
+.exam-item {
+	padding: 0;
+    margin: 0 .5rem;
+}
+
+@media(max-width: 992px)
+{
+	.card-topic.row {
+		text-align: center;
+	}
+}
+
+@media(max-width: 768px){
 	.action-wrapper {
 		display: none;
 	}
-
 	#table-question {
 		width: 1000px;
+	}
+	#topic-list-wrapper {
+		padding: 15px;
+	}
+	.card-body {
+		padding: 15px;
+	}
+	.topic-action {
+		margin-top: 2rem;
+	}
+	.exam-info {
+		padding: 0;
 	}
 }

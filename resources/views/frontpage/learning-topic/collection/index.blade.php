@@ -18,7 +18,7 @@
                 @include('frontpage.topic-sidebar')
             </div>
             <div class="col-md-9 col-sm-12">
-                <h2 class="title">{{ __('section-title.topic_collection')}}</h2>
+                <h2 class="title">{{ __('section-title.my_topic_collection')}}</h2>
                 @include('frontpage.learning-topic.content')
             </div>
         </div>

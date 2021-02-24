@@ -4,7 +4,7 @@ return [
     "motto" => "Ing ngarsa sung tuladha. Ing madya mangun karsa. Tut wuri handayani",
     "tagline" => "Learn more flexible and efficient online. Whenever. Everywhere.",
     "class"=> "Class",
-    "topic"=> "Learning Topic",
+    "topic"=> "Material",
     "task"=> "Assignment",
     "teacher"=> "Teacher",
     "student"=> "Student",
@@ -114,7 +114,7 @@ return [
     "no_learning_material"=> 'No learning material data found',
     "no_evaluation"=> "No evaluation data found",
     "accessed"=> "Accessed by",
-    "material"=> "Material",
+    "material"=> "Learning Material",
     "done"=> "Finished",
     "answer"=> "Answer",
     "answer_of"=> "Answer of",
@@ -148,4 +148,5 @@ return [
     "search_result_for" => "Search results for",
     "parent_account" => "Parent Account",
     "create_parent_account" => "Create Parent Account",
+    "evaluation_result" => "Evaluation Result"
 ];

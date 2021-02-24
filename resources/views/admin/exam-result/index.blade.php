@@ -97,6 +97,7 @@
         <div class="card">
             <div class="header">
                 <h2><strong>{{ __('section-title.evaluation_result_data')}}</strong></h2>
+                @hasrole("Pengajar")
                 <ul class="header-dropdown">
                     <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{ __('label.select_class') }} <i class="zmdi zmdi-more"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-left slideUp">
@@ -107,14 +108,18 @@
                             @endforeach
                         </ul>
                     </li>
+                    <li>
+                        <button id="btnExportEvaluationResult" type="button" class="btn btn-success"><i class="zmdi zmdi-file-text text-light"></i> Export {{ __('label.evaluation_result')}}</button>
+                    </li>
                 </ul>
+                @endhasrole
             </div>
             <div class="body">
                 <form action="{{route('exam-results.batch.delete',$exam->id)}}" method="POST">
                     @csrf
                     @method('delete')
                     <div class="table-responsive">
-                        <table class="table table-hover dataTable c_table theme-color">
+                        <table id="tableEvaluationResult" class="table table-hover dataTable c_table theme-color">
                             <thead>
                                 <tr>
                                     <th class="no-sort">
@@ -199,6 +204,19 @@
 <script src="{{asset('assets/bundles/datatablescripts.bundle.js')}}"></script>
 <script src="{{asset('assets/js/pages/tables/jquery-datatable.js')}}"></script>
 <script src="{{asset('assets/plugins/sweetalert/sweetalert.min.js')}}"></script>
+<script src="{{asset('js/table2excel.js')}}"></script>
+<script>
+    $(document).ready(function(){
+        $("#btnExportEvaluationResult").click(function(){
+            $("#tableEvaluationResult").table2excel({
+                name: "{!! __('label.evaluation_result') !!} {!! $exam->title !!}",
+                filename: "{!! __('label.evaluation_result') !!} {!! $exam->title !!}",
+                fileext: ".xls",
+                columns: [1,2,3,5]
+            }); 
+        });
+    });
+</script>
 <script>
     $('.dataTable').dataTable( {
             "columnDefs": [ {

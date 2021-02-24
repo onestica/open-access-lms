@@ -31,16 +31,35 @@
                         @endhasrole
                     </div>
                 </div>
-            </li>            
+            </li>
             <li class="{{ $menu == '' ? 'active open' : null }}">
                 <a href="{{\LaravelLocalization::localizeURL('dashboard')}}"><i class="zmdi zmdi-apps"></i><span>{{ __('menu-label.dashboard') }}</span></a>
             </li>
             @hasrole('Siswa')
+            <li class="{{ $menu == 'topics' ? 'active open' : null }}">
+                <a class="menu-toggle"><i class="zmdi zmdi-file-text"></i><span>{{ __('label.material') }}</span></a>
+                <ul class="ml-menu">
+                    <li>
+                        <a href="{{\LaravelLocalization::localizeURL('student/topics')}}"><span>{{ __('menu-label.show_all') }}</span></a>
+                    </li>
+                    <li>
+                        <a href="{{\LaravelLocalization::localizeURL('student/topics/my-topics')}}"><span>{{ __('menu-label.my_topic') }}</span></a>
+                    </li>
+                </ul>
+            </li>
             <li class="{{ $menu == 'tasks' ? 'active open' : null }}">
-                <a href="{{\LaravelLocalization::localizeURL('student/tasks/report')}}"><i class="zmdi zmdi-assignment"></i><span>{{ __('menu-label.task_summary') }}</span></a>
+                <a href="{{\LaravelLocalization::localizeURL('student/tasks/reports')}}"><i class="zmdi zmdi-assignment"></i><span>{{ __('menu-label.task_summary') }}</span></a>
             </li>
             <li class="{{ $menu == 'exams' ? 'active open' : null }}">
-                <a href="{{\LaravelLocalization::localizeURL('student/exams')}}"><i class="zmdi zmdi-file-plus"></i><span>{{ __('menu-label.evaluation_result') }}</span></a>
+                <a class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>{{ __('menu-label.evaluation') }}</span></a>
+                <ul class="ml-menu">
+                    <li>
+                        <a href="{{\LaravelLocalization::localizeURL('student/exams')}}"><span>{{ __('menu-label.show_all') }}</span></a>
+                    </li>
+                    <li>
+                        <a href="{{\LaravelLocalization::localizeURL('student/exams/results')}}"><span>{{ __('menu-label.evaluation_result') }}</span></a>
+                    </li>
+                </ul>
             </li>
             @endhasrole
             @hasrole('Wali Siswa')

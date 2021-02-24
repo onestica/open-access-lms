@@ -18,7 +18,7 @@ return [
     "announcement"=> "Pengumuman",
     "subject"=> "Mata Pelajaran",
     "learning_topic"=> "Topik Pembelajaran",
-    "task"=> "Penugasan Siswa",
+    "task"=> "Penugasan",
     "task_summary"=> "Rekap Tugas",
     "question"=> "Soal",
     "change_avatar"=> "Ubah Foto Profil",
@@ -30,5 +30,6 @@ return [
     "import_data"=> "Import Data",
     "class_promotion"=> "Kenaikan Kelas",
     "folder_view"=> "Tampilan Folder",
-    "list_view"=> "Tampilan List"
+    "list_view"=> "Tampilan List",
+    "show_all"=> "Tampilkan Semua"
 ];

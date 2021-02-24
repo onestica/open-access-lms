@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-{{ __('section-title.evaluation_data') }}
+    {{ __('section-title.evaluation_data') }}
 @endsection
 @section('page-style')
 <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-select/css/bootstrap-select.css')}}"/>

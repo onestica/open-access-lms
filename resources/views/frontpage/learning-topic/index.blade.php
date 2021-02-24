@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-md-2 col-sm-12 form-group">
                             <p class="text-light d-none d-md-block">-</p>
-                            <button type="submit" class="btn btn-lg btn-royal-blue btn-filter-topic text-light"><i class="fas fa-filter mr-2"></i> Filter</button>
+                            <button type="submit" class="btn btn-lg btn-filter-topic"><i class="fas fa-filter mr-2"></i> Filter</button>
                         </div>
                     </div>
                 </form>

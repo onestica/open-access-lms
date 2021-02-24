@@ -23,7 +23,6 @@
         @endif
         <!-- Custom Css -->
         <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}">
-
         <link rel="stylesheet" href="{{asset('css/custom-style.css')}}">
         @yield('after-styles')
 

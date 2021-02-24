@@ -4,7 +4,7 @@ return [
     "motto" => "Ing ngarsa sung tuladha. Ing madya mangun karsa. Tut wuri handayani",
     "tagline" => "Belajar lebih fleksibel dan efisien secara online. Kapanpun. Dimanapun.",
     "class"=> "Kelas",
-    "topic"=> "Topik Pembelajaran",
+    "topic"=> "Materi",
     "task"=> "Penugasan",
     "teacher"=> "Guru",
     "student"=> "Siswa",
@@ -114,7 +114,7 @@ return [
     "no_learning_material"=> 'Belum ada bahan pembelajaran',
     "no_evaluation"=> "Tidak ada evaluasi",
     "accessed"=> "Diakses oleh",
-    "material"=> "Materi",
+    "material"=> "Materi Pembelajaran",
     "done"=> "Selesai",
     "answer"=> "Jawaban",
     "answer_of"=> "Jawaban",
@@ -148,4 +148,5 @@ return [
     "search_result_for" => "Hasil pencarian untuk",
     "parent_account" => "Akun Wali Siswa",
     "create_parent_account" => "Buat Akun Wali Siswa",
+    "evaluation_result" => "Hasil Evaluasi"
 ];
