@@ -22,7 +22,7 @@ class StudentTopicController extends Controller
 
         $topics_from_student_grade = Grade::findOrFail(Auth::user()->grade_id)->learningTopics()->with(['subject','user'])->get();
 
-        $topics = $topic_collection->merge($topics_from_student_grade);
+        $topics = $topic_collection->merge($topics_from_student_grade)->sortBy('grade_level');
 
         return view('student.learning-topic.index-my-topic', compact('topics'));
     }

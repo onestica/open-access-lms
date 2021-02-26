@@ -35,8 +35,10 @@
 
 @push('after-scripts')
 <script>
-    $('.btn-remove-collection').on('click', function(){
-
+    $('.btn-add-collection').on('click', function(){
+        
+        let button_content = $(this).html()
+        $(this).text('Loading...')
         const CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content')
         let topic_id = $(this).data('topic-id')
         let button = $(this)
@@ -45,11 +47,53 @@
             headers : {
                 'X-CSRF-TOKEN' : CSRF_TOKEN
             },
-            url: '{!! \LaravelLocalization::localizeURL("/") !!}/my-topics/'+topic_id,
+            url: '{!! \LaravelLocalization::localizeURL("/my-topics") !!}',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                topic_id: topic_id,
+            },
+            success: function(response){
+                button.html(button_content)
+                button.hide()
+                button.siblings('.btn-remove-collection').show()
+                swal({
+                    text: response['message'],
+                    icon: "success",
+                });
+            },
+            error: function(response){
+                swal({
+                    text: "{!! __('messages.topic_fail_added') !!}",
+                    icon: "error",
+                });
+            },
+        });
+    });
+
+    $('.btn-remove-collection').on('click', function(){
+
+        let button_content = $(this).html()
+        $(this).text('Loading...')
+        const CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content')
+        let topic_id = $(this).data('topic-id')
+        let button = $(this)
+
+        $.ajax({
+            headers : {
+                'X-CSRF-TOKEN' : CSRF_TOKEN
+            },
+            url: '{!! \LaravelLocalization::localizeURL("/my-topics") !!}/'+topic_id,
             type: 'delete',
             dataType: 'json',
             success: function(response){
-                button.parent().parent().parent().remove()
+                button.html(button_content)
+                button.hide()
+                button.siblings('.btn-add-collection').show()
+                swal({
+                    text: response['message'],
+                    icon: "success",
+                });
             },
             error: function(response){
                 swal({

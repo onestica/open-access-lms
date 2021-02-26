@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontpage;
 
 use App\LearningTopic;
+use App\Grade;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,7 +12,11 @@ class StudentLearningTopicCollectionController extends Controller
 {
     public function index()
     {
-        $topics = Auth::user()->learningTopicCollections()->with('user','subject')->orderBy('grade_level')->get();
+        $topic_collection = Auth::user()->learningTopicCollections()->with('user','subject')->get();
+
+        $topics_from_student_grade = Grade::findOrFail(Auth::user()->grade_id)->learningTopics()->with(['subject','user'])->get();
+
+        $topics = $topic_collection->merge($topics_from_student_grade)->sortBy('grade_level');
 
         return view('frontpage.learning-topic.collection.index', compact('topics'));
     }
