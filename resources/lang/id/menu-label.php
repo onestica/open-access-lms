@@ -31,5 +31,6 @@ return [
     "class_promotion"=> "Kenaikan Kelas",
     "folder_view"=> "Tampilan Folder",
     "list_view"=> "Tampilan List",
-    "show_all"=> "Tampilkan Semua"
+    "show_all"=> "Tampilkan Semua",
+    "manual_book" => "Buku Panduan"
 ];

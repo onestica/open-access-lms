@@ -31,5 +31,6 @@ return [
     "class_promotion"=> "Class Promotion",
     "folder_view"=> "Folder View",
     "list_view"=> "List View",
-    "show_all"=> "Show All"
+    "show_all"=> "Show All",
+    "manual_book" => "Manual Book"
 ];

@@ -71,7 +71,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarToggler">
-              <ul class="navbar-nav mt-2 mt-lg-0 mr-auto">
+              <ul class="navbar-nav mt-2 mt-lg-0 mr-auto align-items-center">
                 <li class="nav-item {{($home_menu == '') ? 'active' : ''}}">
                   <a class="nav-link" href="{{\LaravelLocalization::localizeURL('/')}}">{{ __('menu-label.home') }}</a>
                 </li>
@@ -91,6 +91,9 @@
                     <a class="nav-link" href="{{\LaravelLocalization::localizeURL('sops')}}">{{ __('menu-label.sop_file') }}</a>
                   </li>
                 @endhasanyrole
+                <li class="nav-item">
+                  <a class="btn btn-sm btn-pastel-orange btn-rounded text-light" href="https://drive.google.com/file/d/13-b9qSvL9uwVJMkR5GLudhFESutTEJK3/view?usp=sharing">{{ __('menu-label.manual_book') }}</a>
+                </li>
               </ul>
               <div class="navbar-icon-wrapper">
                 <a href="https://www.facebook.com" class="socmed-icon"><i class="fab fa-facebook-f"></i></a>
