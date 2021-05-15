@@ -368,7 +368,7 @@ a.nav-link:hover {
 }
 
 .nav-link {
-	color: #999;
+	color: #595274;
 	font-size: 1.8rem;
 	padding: 10px 15px;
 }
@@ -378,7 +378,7 @@ a.nav-link:hover {
 }
 
 .navbar-icon-wrapper .socmed-icon > i {
-	color: #999;
+	color: #595274;
 	font-size: 1.6rem;
 	margin: 0 5px;
 }
@@ -388,7 +388,7 @@ a.nav-link:hover {
 }
 
 a.socmed-icon:hover {
-	color: #fff;
+	color: #000;
 }
 
 .btn-sm-login {
@@ -666,7 +666,7 @@ a.socmed-icon:hover {
 
 .footer-bottom div {
 	padding: 10px 0px;
-	color: #707070;
+	color: #303030;
 }
 
 .footer-icon {
@@ -674,12 +674,12 @@ a.socmed-icon:hover {
 }
 
 .footer-icon a > i {
-	color: #707070;
+	color: #303030;
 	padding: 0 5px;
 }
 
 .footer-icon a > i:hover {
-	color: #333;
+	color: #000;
 }
 
 .highlight {

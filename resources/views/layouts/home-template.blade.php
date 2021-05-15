@@ -137,7 +137,7 @@
       <footer class="footer">
         <div class="container">
           <div class="footer-bottom">
-              <div class="copyright">&copy; {{ date('Y') }} SMP N 6 Semarang. All rights reserved.</div>
+              <div class="copyright">{{ __('label.developed_by') }} Dody Sumardi &copy; {{ date('Y') }}. All rights reserved.</div>
               <div class="footer-icon">
               <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
               <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>

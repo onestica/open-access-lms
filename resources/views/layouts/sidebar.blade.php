@@ -2,13 +2,9 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        @if(Auth::user()->roles[0]->name == 'Wali Siswa')
-            <img src="{{asset('img/favicon-web.png')}}" width="25" alt="{{config('app.name')}}"><span class="m-l-10">{{config('app.name')}}</span>
-        @else
-            <a href="{{\LaravelLocalization::localizeURL('/')}}">
-                <img src="{{asset('img/favicon-web.png')}}" width="25" alt="{{config('app.name')}}"><span class="m-l-10">{{config('app.name')}}</span>
-            </a>
-        @endif
+        <a href="{{\LaravelLocalization::localizeURL('/')}}">
+            <img src="{{asset('img/favicon-web.png')}}" width="30%" alt="Logo"><span class="m-l-10">{{config('app.name')}}</span>
+        </a>
     </div>
     <div class="menu">
         <ul class="list">

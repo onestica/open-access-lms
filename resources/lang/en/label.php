@@ -148,5 +148,6 @@ return [
     "search_result_for" => "Search results for",
     "parent_account" => "Parent Account",
     "create_parent_account" => "Create Parent Account",
-    "evaluation_result" => "Evaluation Result"
+    "evaluation_result" => "Evaluation Result",
+    "developed_by" => "Developed by"
 ];

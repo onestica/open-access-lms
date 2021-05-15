@@ -148,5 +148,6 @@ return [
     "search_result_for" => "Hasil pencarian untuk",
     "parent_account" => "Akun Wali Siswa",
     "create_parent_account" => "Buat Akun Wali Siswa",
-    "evaluation_result" => "Hasil Evaluasi"
+    "evaluation_result" => "Hasil Evaluasi",
+    "developed_by" => "Dikembangkan oleh"
 ];
