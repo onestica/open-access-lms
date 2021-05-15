@@ -2,7 +2,7 @@
 Learning management system built for SMP N 6 Semarang (Junior Highschool in Semarang, Indonesia) that provide customize feature adjusted to locale curriculum requirements.
 
 ## Tech Stack
-Developed using Laravel, Bootstrap, jQuery & MySQL
+Developed using **Laravel, Bootstrap, jQuery & MySQL**
 
 ## Features
 - 4 Different Role: Admin, Supervisor, Teacher, Student & Parent
