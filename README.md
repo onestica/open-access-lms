@@ -20,3 +20,4 @@ Developed using Laravel, Bootstrap, jQuery & MySQL
 - Evaluation Result Report (pass percentage, average grade, participant)
 - Export Evaluation Answer Recap (excel format) for item question analysis using ITEMAN app
 - Announcement broadcast via browser push notification (using OneSignal)
+- PWA ready
