@@ -9,7 +9,7 @@ Developed using Laravel, Bootstrap, jQuery & MySQL
 - School Data Member Management - for account registration validation (excel import data provided)
 - Custom Registration Mechanism (import school member data -> user register with email, password, NISN/NIP and place of born -> if NISN/NIP and place of born data exists (valid) -> registration success)
 - Account Management
-- Learning Progress Monitoring for Parent
+- Student Assignment and Evaluation Grade Monitoring for Parent
 - Learning Material Management with WYSIWYG editor & file upload (support doc, pdf, image, audio and video)
 - Learning Material visitor history
 - Assignment Management
