@@ -6,7 +6,8 @@ Developed using Laravel, Bootstrap, jQuery & MySQL
 
 ## Features
 - 4 Different Role: Admin, Supervisor, Teacher, Student & Parent
-- School Data Member Management (excel import data provided)
+- School Data Member Management - for account registration validation (excel import data provided)
+- Custom Registration Mechanism (import school member data -> user register with email, password, NISN/NIP and place of born -> if NISN/NIP and place of born data exists (valid) -> registration success)
 - Account Management
 - Learning Progress Monitoring for Parent
 - Learning Material Management with WYSIWYG editor & file upload (support doc, pdf, image, audio and video)
