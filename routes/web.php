@@ -39,8 +39,9 @@ Route::group([
     Route::get('topics/subjects/{subject}','Frontpage\LearningTopicIndexController@indexBySubject');
     Route::get('topics/grades/{grade}/subjects/{subject}','Frontpage\LearningTopicIndexController@indexByGradeSubject');
     Route::get('topics/{topic}','Frontpage\LearningTopicController@show')->middleware('topic.access');
-    Route::get('sops', 'Frontpage\SOPController@index');
     Route::get('exams', 'Frontpage\ExamController@index');
+    Route::get('sops', 'Frontpage\SOPController@index');
+    Route::get('contacts', 'Frontpage\ContactController@index');
 
     // Auth Middleware
     Route::middleware(['auth'])->group(function(){

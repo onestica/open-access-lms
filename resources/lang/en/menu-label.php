@@ -32,5 +32,6 @@ return [
     "folder_view"=> "Folder View",
     "list_view"=> "List View",
     "show_all"=> "Show All",
-    "manual_book" => "Manual Book"
+    "manual_book" => "Manual Book",
+    "contact" => "Contact"
 ];

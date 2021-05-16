@@ -149,5 +149,6 @@ return [
     "parent_account" => "Parent Account",
     "create_parent_account" => "Create Parent Account",
     "evaluation_result" => "Evaluation Result",
-    "developed_by" => "Developed by"
+    "developed_by" => "Developed by",
+    "school_location" => "School Location"
 ];

@@ -34,7 +34,7 @@ class UserFormServiceProvider extends ServiceProvider
             $view->with('roles', Role::select('id','name')->get());
         });
 
-        View::composer(['frontpage.learning-topic.index','frontpage.learning-topic.collection.index','frontpage.learning-topic.show','frontpage.task.show','frontpage.sop.index','frontpage.exam.index','frontpage.exam.unlock'], function($view){
+        View::composer(['frontpage.learning-topic.index','frontpage.learning-topic.collection.index','frontpage.learning-topic.show','frontpage.task.show','frontpage.sop.index','frontpage.exam.index','frontpage.exam.unlock', 'frontpage.contact'], function($view){
             $view->with('subjects', Cache::remember('subjects', config('cache.duration.long'), function(){
                 return Subject::select('id','name')->get();
             }));

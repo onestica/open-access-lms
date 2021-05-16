@@ -149,5 +149,6 @@ return [
     "parent_account" => "Akun Wali Siswa",
     "create_parent_account" => "Buat Akun Wali Siswa",
     "evaluation_result" => "Hasil Evaluasi",
-    "developed_by" => "Dikembangkan oleh"
+    "developed_by" => "Dikembangkan oleh",
+    "school_location" => "Lokasi Sekolah"
 ];

@@ -32,5 +32,6 @@ return [
     "folder_view"=> "Tampilan Folder",
     "list_view"=> "Tampilan List",
     "show_all"=> "Tampilkan Semua",
-    "manual_book" => "Buku Panduan"
+    "manual_book" => "Buku Panduan",
+    "contact" => "Kontak"
 ];

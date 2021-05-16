@@ -65,7 +65,7 @@
     	<!-- Header Menu Area Start Here -->
     	<div class="header-menu-one">
     		<div class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="{{\LaravelLocalization::localizeURL('/')}}"><img src="{{asset('img/logo-web.png')}}" width="50px"></a>
+            <a class="navbar-brand" href="{{\LaravelLocalization::localizeURL('/')}}"><img src="{{asset('img/logo-web.png')}}" width="70"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -91,6 +91,9 @@
                     <a class="nav-link" href="{{\LaravelLocalization::localizeURL('sops')}}">{{ __('menu-label.sop_file') }}</a>
                   </li>
                 @endhasanyrole
+                <li class="nav-item {{($home_menu == 'contacts') ? 'active' : ''}}">
+                  <a class="nav-link" href="{{\LaravelLocalization::localizeURL('contacts')}}">{{ __('menu-label.contact') }}</a>
+                </li>
                 <li class="nav-item">
                   <a class="btn btn-sm btn-pastel-orange btn-rounded text-light" href="https://drive.google.com/file/d/13-b9qSvL9uwVJMkR5GLudhFESutTEJK3/view?usp=sharing">{{ __('menu-label.manual_book') }}</a>
                 </li>
