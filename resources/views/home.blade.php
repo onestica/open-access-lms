@@ -21,7 +21,7 @@
             <p>{{ __('label.motto')}}</p>
             <a href="{{\LaravelLocalization::localizeURL('topics')}}" class="btn btn-lg btn-pastel-orange btn-rounded text-light"><i class="fas fa-search"></i> {{ __('button-label.browse_topics')}}</a>
           </div>
-          <img class="showcase-img img-fluid" src="{{ asset('img/coach.svg') }}">
+          <img class="showcase-img img-fluid" src="{{ asset('img/showcase.png') }}" alt="SMP N 6 Semarang">
         </div>
       </div>
     </div>
