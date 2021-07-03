@@ -94,7 +94,7 @@
                                         <tr>
                                             <td>{{ __('label.grade') }}</td>
                                             <td>
-                                                {!! $submission->mark ?? '<span class="text-secondary">Belum dinilai</span>' !!}
+                                                {!! $submission->mark ?? '<span class="text-secondary">'.__('label.not_graded_yet').'</span>' !!}
                                             </td>
                                         </tr>
                                         <tr>
@@ -125,7 +125,7 @@
                                         <input type="hidden" name="task_id" value="{{$task->id}}">
                                         <div class="row mt-3">
                                             <div class="col-lg-10 col-12 form-group">
-                                                <label class="text-danger">Max. 5 MB</label>
+                                                <label class="text-danger">Max. 15 MB</label>
                                                 <input type="file" class="form-control file" name="task_file" data-browse-on-zone-click="true" required>
                                                 @error('task_file')
                                                 <div class="form-grop">

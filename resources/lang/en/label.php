@@ -150,5 +150,6 @@ return [
     "create_parent_account" => "Create Parent Account",
     "evaluation_result" => "Evaluation Result",
     "developed_by" => "Developed by",
-    "school_location" => "School Location"
+    "school_location" => "School Location",
+    "not_graded_yet" => "Not graded yet"
 ];

@@ -150,5 +150,6 @@ return [
     "create_parent_account" => "Buat Akun Wali Siswa",
     "evaluation_result" => "Hasil Evaluasi",
     "developed_by" => "Dikembangkan oleh",
-    "school_location" => "Lokasi Sekolah"
+    "school_location" => "Lokasi Sekolah",
+    "not_graded_yet" => "Belum dinilai"
 ];

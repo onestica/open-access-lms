@@ -25,7 +25,7 @@ class TaskSubmissionFormRequest extends FormRequest
     {
         return [
             'task_id' => 'required|numeric',
-            'task_file' => 'required|file|mimes:doc,docx,odp,ods,odt,pdf,ppt,pptx,swf,vsd,png,jpg,jpeg,webp,xls,xlsx,zip,rar,gzip|max:5000',
+            'task_file' => 'required|file|mimes:doc,docx,odp,ods,odt,pdf,ppt,pptx,swf,vsd,png,jpg,jpeg,webp,xls,xlsx,zip,rar,gzip|max:15000',
         ];
     }
 }
