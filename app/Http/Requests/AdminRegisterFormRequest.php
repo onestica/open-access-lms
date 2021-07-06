@@ -17,7 +17,6 @@ class AdminRegisterFormRequest extends FormRequest
         return [
             'identity_number' => 'required|string|max:191',
             'name' => 'required|string|max:191',
-            'pob' => 'required|string|max:191',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'security_code' => ['required',Rule::in(['x6du374'])],

@@ -26,10 +26,10 @@ class UserRegisterController extends Controller
         {
             return back()->withInput()->with('unavailable',__('messages.account_with_identity_no').$validated['identity_number'].__('messages.already_registered'));
         }
-        else if($member->pob != strtoupper($validated['pob']))
-        {
-            return back()->withInput()->with('pob_unverified', __('messaegs.pob_not_verified'));
-        }
+        // else if($member->pob != strtoupper($validated['pob']))
+        // {
+        //     return back()->withInput()->with('pob_unverified', __('messaegs.pob_not_verified'));
+        // }
         
         if($member->grade == null)
         {

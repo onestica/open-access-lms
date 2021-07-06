@@ -24,7 +24,7 @@ class AdminRegisterController extends Controller
         $member = Member::create([
             'identity_number' => $validated['identity_number'],
             'name' => $validated['name'],
-            'pob' => $validated['pob'],
+            'pob' => '-',
             'is_account_created' => 1,
         ]);
 

@@ -18,7 +18,6 @@ class UserAdminInputRequest extends FormRequest
         return [
             'identity_number' => $this->getIDRule(),
             'name' => 'required|string|max:191',
-            'pob' => 'required|string',
             'role' => 'required|string',
             'email' => $this->getEmailRule(),
             'password' => $this->getPasswordRule(),

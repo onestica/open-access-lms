@@ -11,20 +11,6 @@
 </div>
 <div class="form-group mb-3">
     <div class="input-group">
-        <input id="pob" type="text" class="form-control" placeholder="{{ __('label.pob') }}" name="pob" value="{{ old('pob') }}" required autocomplete="pob">
-        <div class="input-group-append">
-            <span class="input-group-text"><i class="zmdi zmdi-pin"></i></span>
-        </div>
-    </div>
-    @error('pob')
-        <label for="pob" class="error">{{ $message }}</label>
-    @enderror
-    @if(session('pob_unverified'))
-        <label for="pob" class="error">{{ session('pob_unverified') }}</label>
-    @endif
-</div>
-<div class="form-group mb-3">
-    <div class="input-group">
         <input id="email" type="email" class="form-control" placeholder="{{ __('label.email') }}" name="email" value="{{ old('email') }}" required autocomplete="email">
         <div class="input-group-append">
             <span class="input-group-text"><i class="zmdi zmdi-email"></i></span>
